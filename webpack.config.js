@@ -30,7 +30,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Casted Example',
+      template: 'src/index.html',
       minify: false,
     })
   ],
