@@ -36,7 +36,7 @@ CastedDocReady(() => {
         child.frame.sandbox = "allow-same-origin allow-scripts"
         child.frame.scrolling = "no"
         child.frame.style.border = "none";
-        child.frame.style.width = width ? width : "100%"
+        child.frame.style.width = "100%"
         child.frame.style.height = height ? height : "75vh";
         // Once attributes are set, display the embed
         player.style.display = "block"
