@@ -2,7 +2,7 @@ import 'promise-polyfill/src/polyfill' // https://www.npmjs.com/package/promise-
 import Postmate from 'postmate' // https://www.npmjs.com/package/postmate
 
 
-const CastedDocReady = (fn) => {
+const CastedDocReady = (fn) => { 
     // see if DOM is already available
     if (document.readyState === "complete" || document.readyState === "interactive") {
         // call on next available tick
