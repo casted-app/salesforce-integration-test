@@ -10,7 +10,7 @@ Casted is proposing a secure, simple, and scalable way to embed podcast players 
 #### Option 1
 Salesforce will add an iframe to their pages that point to a Casted player. The embedded player will send analytic events via the postMessage protocol.
 
-See a very simple [Demo](dist/embed.html).
+See a very simple [Demo](dist/iframe.html).
 
 Read the details of this solution [here](option1.md).
 

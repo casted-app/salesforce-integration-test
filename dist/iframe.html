@@ -4,11 +4,12 @@
 </head>
 <body>
   
+  <!-- Note - this html file needs to be running on a server for postMessage to work -->
+  
   <h1>Option 1 Test Page</h1>
   <p>Events are viewable in the console</p>
-  <p><small>Note - this html file needs to be running on a server for postMessage to work</small></p>
+  <p><small>Note - this demo uses our QA environment which loads significantly slower than a production embed as we commit fewer resources to this environment</small></p>
   
-    <!-- Note the iframe URL structure will change once we complete the new layout -->
     <iframe 
       width="100%" 
       height="350px" 
@@ -16,6 +17,7 @@
       style="border: none" 
       sandbox="allow-scripts allow-same-origin"
       src="https://qa-podcast.casted.us/public/1/The-Casted-Podcast-86740/315696?embed=true">
+      <!-- Note the iframe URL structure will change once we complete the new layout -->
     </iframe>
   
   

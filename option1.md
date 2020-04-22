@@ -4,7 +4,7 @@
 
 Salesforce will add an iframe to their pages that point to a Casted player. The embedded player will send analytic events via the postMessage protocol.
 
-See a very simple [Demo](dist/embed.html).
+See a very simple [Demo](dist/iframe.html).
 
 #### Benefits
 **Easy Implementation**
@@ -54,6 +54,7 @@ Salesforce will add an iframe anywhere in the DOM with the src attribute pointin
   <!-- ... rest of page -->
 </body>
 ```
+See this code in action in the repo at [/dist/iframe.html](https://github.com/casted-app/salesforce-integration-test/blob/master/dist/iframe.html)
 
 When a user interacts with the loaded player, events will be submitted via the postMessage protocol. Listening for those events is fairly simple:
 
