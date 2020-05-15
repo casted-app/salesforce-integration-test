@@ -20,7 +20,7 @@ See a very simple [Demo](dist/iframe.html).
 #### Considerations
 
 **Sizing**
-* The embeded player will not always be the same height based on how many takeaways exist, how long the transcripts is, etc. Scrolling an iframe is typically considered a bad user experience
+* The embeded player will not always be the same height based on how many takeaways exist, how long the transcripts is, etc. Scrolling an iframe is typically considered a bad user experience, so the player will fire a postMessage to declare content size to help set height on the fly
 * This can be addressed by agreeing on a max height for the player and Casted will attempt to ensure the content does not extend past that height
 * Alternatively, a postMessage can be used where the player gives the parent a suggested height and the parent updates the child's frame height
 
@@ -44,6 +44,7 @@ Salesforce will add an iframe anywhere in the DOM with the src attribute pointin
 <body>
   <!-- ... page markup -->
   <iframe 
+    id="casted-iframe"
     width="100%" 
     height="350px" 
     scrolling="no" 
@@ -66,6 +67,10 @@ When a user interacts with the loaded player, events will be submitted via the p
     if(message.origin === "https://qa-podcast.casted.us" && message.data.event) {
       // Handle events
       console.log("Event Received", message.data.event, message.data.payload)
+      
+      if(message.data.event === "castedSizeUpdate") {
+        document.getElementById("casted-iframe").height = message.data.payload.height
+      }
     }
   }, false)
 </script>

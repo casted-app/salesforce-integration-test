@@ -27,6 +27,10 @@
       if(message.origin === "https://qa-podcast.casted.us" && message.data.event) {
         // Handle events
         console.log("Event Received", message.data.event, message.data.payload)
+        
+        if(message.data.event === "castedSizeUpdate") {
+          document.getElementById("casted-iframe").height = message.data.payload.height
+        }
       }
     }, false)
   </script>
